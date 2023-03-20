@@ -1,0 +1,58 @@
+<script>
+    pacientes = prompt("DIGITE O NÚMERO DE PACIENTES");
+    pacientes = parseInt(pacientes);
+
+    for(x=1;x<=pacientes;x++)
+    {
+
+        // VAMOS PEDIR O NOME DO USUÁRIO: 
+        n = prompt("DIGITE SEU NOME:");
+        
+
+        // VAMOS PEDIR A IDADE DO USUÁRIO: 
+        i = prompt("DIGITE SUA IDADE:");
+        I  = parseInt(i);  // Convertemos para INTEIRO
+
+        // VAMOS PEDIR O PESO DO USUÁRIO: 
+        p = prompt("DIGITE SEU PESO:");
+        p = parseFloat(p);
+
+
+        // VAMOS PEDIR A ALTURA DO USUÁRIO: 
+        a = prompt("DIGITE SUA ALTURA:");
+        a = parseFloat(a);
+
+        imc = p / Math.pow(a,2); 
+
+        if (imc < 18.5)
+        {
+            console.log(n,i,imc,"Abaixo do peso normal");
+        }
+
+        if (imc > 18.5 && imc <= 24.9)
+        {
+            console.log(n,i,imc,"Peso normal");
+        }
+
+        if (imc >= 25 && imc <= 29.9)
+        {
+            console.log(n,i,imc,"Excesso de peso");
+        }
+
+        if (imc >= 30 && imc <= 34.9)
+        {
+            console.log(n,i,imc,"Obesidade classe I");
+        }
+
+        if (imc >= 35 && imc <= 39.9)
+        {
+            console.log(n,i,imc,"Obesidade classe II");
+        }
+
+        if (imc >= 40)
+        {
+            console.log(n,i,imc,"Obesidade classe III");
+        }
+
+    }
+</script>
